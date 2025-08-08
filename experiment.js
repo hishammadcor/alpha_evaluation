@@ -47,6 +47,7 @@ document.body.appendChild(loadingMessage);
 // 2. Prepare the timeline
 const participant_id = getParticipantId(jsPsych);
 const saved_data = loadData();
+if (saved_data) { jsPsych.data.addData(saved_data); }
 const completed_trials = saved_data ? saved_data.map(trial => trial.audio_filename) : [];
 const stimuli_to_run = stimuli.filter(stimulus => !completed_trials.includes(stimulus.filename));
 
@@ -54,7 +55,7 @@ let timeline = [];
 
 if (stimuli_to_run.length > 0) {
   let welcome_message = `
-    <div style="max-width: 600px; text-align: left; line-height: 1.6em;">
+    <div class="content">
       <h2>Welcome to the Survey</h2>
       <p>Your task is to decide if the sentence you read matches what was said in the audio.</p>
       <p>Your progress is saved automatically, so you can close the tab and return later to continue.</p>
@@ -62,7 +63,7 @@ if (stimuli_to_run.length > 0) {
   `;
   if (saved_data && completed_trials.length > 0) {
     welcome_message = `
-      <div style="max-width: 600px; text-align: left; line-height: 1.6em;">
+      <div class="content">
         <h2>Welcome Back!</h2>
         <p>You have completed ${completed_trials.length} out of ${stimuli.length} questions.</p>
         <p>We'll start you right where you left off.</p>
@@ -72,8 +73,7 @@ if (stimuli_to_run.length > 0) {
   const instructions = {
     type: jsPsychHtmlButtonResponse, // This will now work correctly
     stimulus: welcome_message,
-    choices: ['Begin'],
-    margin_vertical: '20px'
+    choices: ['Begin']
   };
   timeline.push(instructions);
 
@@ -87,9 +87,9 @@ if (stimuli_to_run.length > 0) {
       const sentence = jsPsych.timelineVariable('sentence');
       const filename = jsPsych.timelineVariable('filename');
       return `
-        <div style="max-width: 600px;">
+        <div class="prompt-container">
           <p>Does the following sentence match what you heard in the audio: <b>${filename}</b>?</p>
-          <p style="font-size: 1.2em; font-style: italic; color: #333; border: 1px solid #ccc; padding: 15px; border-radius: 8px;">
+          <p class="prompt-sentence">
             "${sentence}"
           </p>
         </div>
@@ -103,6 +103,7 @@ if (stimuli_to_run.length > 0) {
       const msg = document.getElementById('loading-message');
       if (msg) msg.style.display = 'none';
     },
+
     data: {
       participant_id: participant_id,
       task: 'audio-match',
@@ -116,14 +117,13 @@ if (stimuli_to_run.length > 0) {
 const end_screen = {
   type: jsPsychHtmlButtonResponse,
   stimulus: `
-    <div style="max-width: 600px; text-align: left;">
+    <div class="content">
       <h2>Survey Complete!</h2>
       <p>Thank you for your participation.</p>
       <p>If you have finished all questions, the data file will now download automatically. If you see this screen on your first visit, it means you have already completed this survey in this browser.</p>
     </div>
   `,
-  choices: ['Finish'],
-  margin_vertical: '20px'
+  choices: ['Finish']
 };
 timeline.push(end_screen);
 

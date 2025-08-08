@@ -31,12 +31,12 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_1679_000079_0.20.wav",
-    "sentence": "mr finn said she how d\\'ye do i want to say a word to ye just come here into the corner phineas not knowing how to escape did retreat into the corner with miss fitzgibbon tell me now mr finn have ye been lending money to laurence",
+    "sentence": "mr finn said she how d'ye do i want to say a word to ye just come here into the corner phineas not knowing how to escape did retreat into the corner with miss fitzgibbon tell me now mr finn have ye been lending money to laurence",
     "filename": "2297_1679_000079_0.20"
   },
   {
     "audio": "alpha_data/2297_1679_000106_0.25.wav",
-    "sentence": "i remember lord palmerston saying before some committee about salaries five or six years ago now i daresay that it wouldn\\'t do for an english minister to have his hall door opened by a maid-servant",
+    "sentence": "i remember lord palmerston saying before some committee about salaries five or six years ago now i daresay that it wouldn't do for an english minister to have his hall door opened by a maid-servant",
     "filename": "2297_1679_000106_0.25"
   },
   {
@@ -46,7 +46,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_1679_000212_0.15.wav",
-    "sentence": "lord brentford would put me down at once if i spoke to him on such a subject i am sure he would not you are too big to be put down and no man can really dislike to hear his son well spoken of by those who are well spoken of themselves won\\'t you try mr finn",
+    "sentence": "lord brentford would put me down at once if i spoke to him on such a subject i am sure he would not you are too big to be put down and no man can really dislike to hear his son well spoken of by those who are well spoken of themselves won't you try mr finn",
     "filename": "2297_1679_000212_0.15"
   },
   {
@@ -66,12 +66,12 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_1718_000054_0.30.wav",
-    "sentence": "so wondrous like in feature shape and size as caus\\'d an error in their parents eyesgrateful mistake but soon the sword decides the nice distinction and their fate divides",
+    "sentence": "so wondrous like in feature shape and size as caus'd an error in their parents eyesgrateful mistake but soon the sword decides the nice distinction and their fate divides",
     "filename": "2297_1718_000054_0.30"
   },
   {
     "audio": "alpha_data/2297_1718_000079_0.20.wav",
-    "sentence": "then when i gave my person and my throne this hate this rage had been more timely shown see now the promis\\'d faith the vaunted name the pious man who rushing thro the flame preserv\\'d his gods",
+    "sentence": "then when i gave my person and my throne this hate this rage had been more timely shown see now the promis'd faith the vaunted name the pious man who rushing thro the flame preserv'd his gods",
     "filename": "2297_1718_000079_0.20"
   },
   {
@@ -81,27 +81,27 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_1718_000213_0.07.wav",
-    "sentence": "then shalt thou call on injur\\'d dido\\'s name dido shall come in a black sulph\\'ry flame when death has once dissolv\\'d her mortal frame shall smile to see the traitor vainly weep",
+    "sentence": "then shalt thou call on injur'd dido's name dido shall come in a black sulph'ry flame when death has once dissolv'd her mortal frame shall smile to see the traitor vainly weep",
     "filename": "2297_1718_000213_0.07"
   },
   {
     "audio": "alpha_data/2297_1718_000252_0.20.wav",
-    "sentence": "meantime by jove\\'s impulse mezentius arm\\'d succeeding turnus with his ardor warm\\'d his fainting friends reproach\\'d their shameful flight repell\\'d the victors and renew\\'d the fight",
+    "sentence": "meantime by jove's impulse mezentius arm'd succeeding turnus with his ardor warm'd his fainting friends reproach'd their shameful flight repell'd the victors and renew'd the fight",
     "filename": "2297_1718_000252_0.20"
   },
   {
     "audio": "alpha_data/2297_1718_000275_0.10.wav",
-    "sentence": "here lies a barren waste of thirsty land and there the syrtes raise the moving sand barcaean troops besiege the narrow shore and from the sea pygmalion threatens more propitious heav\\'n and gracious juno lead this wand\\'ring navy to your needful aid",
+    "sentence": "here lies a barren waste of thirsty land and there the syrtes raise the moving sand barcaean troops besiege the narrow shore and from the sea pygmalion threatens more propitious heav'n and gracious juno lead this wand'ring navy to your needful aid",
     "filename": "2297_1718_000275_0.10"
   },
   {
     "audio": "alpha_data/2297_1718_000308_0.15.wav",
-    "sentence": "and brave cupavo follow\\'d but by few whose helm confess\\'d the lineage of the man and bore with wings display\\'d a silver swan love was the fault of his fam\\'d ancestry whose forms and fortunes in his ensigns fly",
+    "sentence": "and brave cupavo follow'd but by few whose helm confess'd the lineage of the man and bore with wings display'd a silver swan love was the fault of his fam'd ancestry whose forms and fortunes in his ensigns fly",
     "filename": "2297_1718_000308_0.15"
   },
   {
     "audio": "alpha_data/2297_1718_000487_0.15.wav",
-    "sentence": "there find the trojan chief who wastes his days in slothful riot and inglorious ease nor minds the future city giv\\'n by fate to him this message from my mouth relate",
+    "sentence": "there find the trojan chief who wastes his days in slothful riot and inglorious ease nor minds the future city giv'n by fate to him this message from my mouth relate",
     "filename": "2297_1718_000487_0.15"
   },
   {
@@ -151,7 +151,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_1953_000014_0.30.wav",
-    "sentence": "the mountain tribes through whose land the army had to march were often unfriendly and rolled rocks down the mountain slopes upon the soldiers at last however the shores of the euxine were reached the greeks since the murder of their generals had marched for five months in an enemy\\'s territory",
+    "sentence": "the mountain tribes through whose land the army had to march were often unfriendly and rolled rocks down the mountain slopes upon the soldiers at last however the shores of the euxine were reached the greeks since the murder of their generals had marched for five months in an enemy's territory",
     "filename": "2297_1953_000014_0.30"
   },
   {
@@ -171,17 +171,17 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2047_000064_0.10.wav",
-    "sentence": "he might revenge himself by scourging a servant of antony\\'s who was then as it happened in octavius\\'s power the news at length suddenly arrived at alexandria that octavius had appeared before pelusium and that the city had fallen into his hands",
+    "sentence": "he might revenge himself by scourging a servant of antony's who was then as it happened in octavius's power the news at length suddenly arrived at alexandria that octavius had appeared before pelusium and that the city had fallen into his hands",
     "filename": "2297_2047_000064_0.10"
   },
   {
     "audio": "alpha_data/2297_2120_000065_0.07.wav",
-    "sentence": "she pays you your wages said lord fawn shortly eh wages yes my laird she does a that then she\\'s your mistress andy again nodded his head and lord fawn again struggled to find some way in which he might approach his subject",
+    "sentence": "she pays you your wages said lord fawn shortly eh wages yes my laird she does a that then she's your mistress andy again nodded his head and lord fawn again struggled to find some way in which he might approach his subject",
     "filename": "2297_2120_000065_0.07"
   },
   {
     "audio": "alpha_data/2297_2120_000078_0.20.wav",
-    "sentence": "linlithgow\\'s visit to her niece had been made on a thursday and on that same evening frank greystock had asked his question in the house of commons or rather had made his speech about the sawab of mygawb",
+    "sentence": "linlithgow's visit to her niece had been made on a thursday and on that same evening frank greystock had asked his question in the house of commons or rather had made his speech about the sawab of mygawb",
     "filename": "2297_2120_000078_0.20"
   },
   {
@@ -201,7 +201,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2120_000336_0.10.wav",
-    "sentence": "but she knew that there might be more of sound protection in lady linlithgow\\'s real wrath than in lizzie\\'s pretended affection so you are there are you said the countess yes i am here lady",
+    "sentence": "but she knew that there might be more of sound protection in lady linlithgow's real wrath than in lizzie's pretended affection so you are there are you said the countess yes i am here lady",
     "filename": "2297_2120_000336_0.10"
   },
   {
@@ -211,7 +211,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2120_000442_0.30.wav",
-    "sentence": "but i can\\'t bear the feeling the fact is a lawyer never understands what is and what is not fair fighting lucy felt her face tingling with heat and was preparing to say a word in defence of that special lawyer when lady fawn\\'s voice was heard from the drawing-room window",
+    "sentence": "but i can't bear the feeling the fact is a lawyer never understands what is and what is not fair fighting lucy felt her face tingling with heat and was preparing to say a word in defence of that special lawyer when lady fawn's voice was heard from the drawing-room window",
     "filename": "2297_2120_000442_0.30"
   },
   {
@@ -231,7 +231,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2120_000716_0.15.wav",
-    "sentence": "and i don\\'t know that i should write at all if it wasn\\'t for something else that must be said sooner or later because as to your coming here in april that is so much a matter of course the only mistake was that you should ever have gone away so we shall expect you here on whatever day you may arrange with lady linlithgow as to leaving her",
+    "sentence": "and i don't know that i should write at all if it wasn't for something else that must be said sooner or later because as to your coming here in april that is so much a matter of course the only mistake was that you should ever have gone away so we shall expect you here on whatever day you may arrange with lady linlithgow as to leaving her",
     "filename": "2297_2120_000716_0.15"
   },
   {
@@ -241,7 +241,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2120_000783_0.15.wav",
-    "sentence": "i think it was the very best speech i ever read in my life said lucy with headlong energy and heightened colour then miss morris you and i have very different opinions about speeches said lord fawn with severity you have probably never read burke\\'s speeches",
+    "sentence": "i think it was the very best speech i ever read in my life said lucy with headlong energy and heightened colour then miss morris you and i have very different opinions about speeches said lord fawn with severity you have probably never read burke's speeches",
     "filename": "2297_2120_000783_0.15"
   },
   {
@@ -256,7 +256,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2376_000163_0.25.wav",
-    "sentence": "he frequently affirmed that he was haunted by his mother\\'s ghost and persecuted with the whips and burning torches of the furies nay he attempted by magical rites to bring up her ghost from below and soften her rage against him",
+    "sentence": "he frequently affirmed that he was haunted by his mother's ghost and persecuted with the whips and burning torches of the furies nay he attempted by magical rites to bring up her ghost from below and soften her rage against him",
     "filename": "2297_2376_000163_0.25"
   },
   {
@@ -281,12 +281,12 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2560_000291_0.07.wav",
-    "sentence": "at this time dolabella who assumed the consulship upon caesar\\'s death and hirtius who became consul during the next year used to attend upon cicero and take lessons in elocution",
+    "sentence": "at this time dolabella who assumed the consulship upon caesar's death and hirtius who became consul during the next year used to attend upon cicero and take lessons in elocution",
     "filename": "2297_2560_000291_0.07"
   },
   {
     "audio": "alpha_data/2297_2560_000532_0.10.wav",
-    "sentence": "in the third book he some time afterwards discusses the stoic doctrine with cato at the tusculan villa of lucullus near to his own he had walked over and rinding cato there by chance had immediately gone to work to demolish cato\\'s philosophical doctrines",
+    "sentence": "in the third book he some time afterwards discusses the stoic doctrine with cato at the tusculan villa of lucullus near to his own he had walked over and rinding cato there by chance had immediately gone to work to demolish cato's philosophical doctrines",
     "filename": "2297_2560_000532_0.10"
   },
   {
@@ -311,7 +311,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2560_000911_0.30.wav",
-    "sentence": "but i cannot think that he should have been hindered by this trial and by caesar\\'s mercy from taking such a step if by nothing else brutus and cassius also stabbed him the question to be decided is whether on public grounds these men were justified in killing him",
+    "sentence": "but i cannot think that he should have been hindered by this trial and by caesar's mercy from taking such a step if by nothing else brutus and cassius also stabbed him the question to be decided is whether on public grounds these men were justified in killing him",
     "filename": "2297_2560_000911_0.30"
   },
   {
@@ -326,7 +326,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2560_001218_0.15.wav",
-    "sentence": "old age was creeping on it was better to write philosophy in friendship with caesar\\'s friends than to be banished again whither he could not write it at all much no doubt he did in preparation for all those treatises which the next eighteen months were to bring forth",
+    "sentence": "old age was creeping on it was better to write philosophy in friendship with caesar's friends than to be banished again whither he could not write it at all much no doubt he did in preparation for all those treatises which the next eighteen months were to bring forth",
     "filename": "2297_2560_001218_0.15"
   },
   {
@@ -341,7 +341,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2560_001472_0.07.wav",
-    "sentence": "divorces were so common that no family odium was necessarily created cicero was at this moment most anxious to get back from dolabella his daughter\\'s dowry",
+    "sentence": "divorces were so common that no family odium was necessarily created cicero was at this moment most anxious to get back from dolabella his daughter's dowry",
     "filename": "2297_2560_001472_0.07"
   },
   {
@@ -361,7 +361,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2560_001970_0.10.wav",
-    "sentence": "of the orations and epistles i have spoken as i have gone on with my task because the matter there treated has been available for the purposes of biography the other two the ehetoric and the philosophy have been distinct from the author\\'s life",
+    "sentence": "of the orations and epistles i have spoken as i have gone on with my task because the matter there treated has been available for the purposes of biography the other two the ehetoric and the philosophy have been distinct from the author's life",
     "filename": "2297_2560_001970_0.10"
   },
   {
@@ -391,22 +391,22 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2599_000154_0.10.wav",
-    "sentence": "i was more than a little astonished and expressed my feelings accordingly it\\'s true said carnehan with a dry cackle nursing his feet which were wrapped in rags true as gospel kings we were with crowns upon our heads me and dravot poor",
+    "sentence": "i was more than a little astonished and expressed my feelings accordingly it's true said carnehan with a dry cackle nursing his feet which were wrapped in rags true as gospel kings we were with crowns upon our heads me and dravot poor",
     "filename": "2297_2599_000154_0.10"
   },
   {
     "audio": "alpha_data/2297_2599_000163_0.15.wav",
-    "sentence": "i leaned forward and looked into his face as steadily as i could he dropped one hand upon the table and i grasped it by the wrist it was twisted like a bird\\'s claw and upon the back was a ragged red diamond-shaped scar",
+    "sentence": "i leaned forward and looked into his face as steadily as i could he dropped one hand upon the table and i grasped it by the wrist it was twisted like a bird's claw and upon the back was a ragged red diamond-shaped scar",
     "filename": "2297_2599_000163_0.15"
   },
   {
     "audio": "alpha_data/2297_2599_000205_0.07.wav",
-    "sentence": "then she turned up at dadur junction in tow of a half-caste and had the impidence to say i was her husband all among the drivers of the running shed we\\'ve done with that says dravot these women are whiter than you or me and a queen i will have for the winter months",
+    "sentence": "then she turned up at dadur junction in tow of a half-caste and had the impidence to say i was her husband all among the drivers of the running shed we've done with that says dravot these women are whiter than you or me and a queen i will have for the winter months",
     "filename": "2297_2599_000205_0.07"
   },
   {
     "audio": "alpha_data/2297_2599_000232_0.10.wav",
-    "sentence": "dravot damned them all round what\\'s wrong with me he shouts standing by the idol imbra am i a dog or am i not enough of a man for your wenches haven\\'t i put the shadow of my hand over this country who stopped the last afghan raid",
+    "sentence": "dravot damned them all round what's wrong with me he shouts standing by the idol imbra am i a dog or am i not enough of a man for your wenches haven't i put the shadow of my hand over this country who stopped the last afghan raid",
     "filename": "2297_2599_000232_0.10"
   },
   {
@@ -436,7 +436,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2684_000011_0.07.wav",
-    "sentence": "project gutenberg\\'s maggie a girl of the streets by stephen crane",
+    "sentence": "project gutenberg's maggie a girl of the streets by stephen crane",
     "filename": "2297_2684_000011_0.07"
   },
   {
@@ -446,7 +446,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2877_000111_0.15.wav",
-    "sentence": "i met the duke once at matching said phineas i remember it well i was there and first made the duke\\'s acquaintance on that occasion i don\\'t know how it was that we became intimate but we did and then i formed a sort of friendship with lady glencora",
+    "sentence": "i met the duke once at matching said phineas i remember it well i was there and first made the duke's acquaintance on that occasion i don't know how it was that we became intimate but we did and then i formed a sort of friendship with lady glencora",
     "filename": "2297_2877_000111_0.15"
   },
   {
@@ -461,7 +461,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_2912_000041_0.07.wav",
-    "sentence": "sage said madame reuter et a vrai dire vous en avez bien l\\'air take one drop of the punch or ponche as she pronounced it it is an agreeable and wholesome beverage after a full meal",
+    "sentence": "sage said madame reuter et a vrai dire vous en avez bien l'air take one drop of the punch or ponche as she pronounced it it is an agreeable and wholesome beverage after a full meal",
     "filename": "2297_2912_000041_0.07"
   },
   {
@@ -501,7 +501,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_3440_000036_0.07.wav",
-    "sentence": "but i\\'m not quite so sure of their principles on our own side in our old party there are a score of men who detest the duke though they would fain be true to the government they have voted with him through thick and thin and he has not spoken a word to one of them since he became prime minister what are you to do with such a man how are you to act with him",
+    "sentence": "but i'm not quite so sure of their principles on our own side in our old party there are a score of men who detest the duke though they would fain be true to the government they have voted with him through thick and thin and he has not spoken a word to one of them since he became prime minister what are you to do with such a man how are you to act with him",
     "filename": "2297_3440_000036_0.07"
   },
   {
@@ -511,7 +511,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_3440_000104_0.25.wav",
-    "sentence": "i hardly dare open my mouth to plantagenet the duke of st bungay has cut me mr monk looks as ominous as an owl and your husband hasn\\'t a word to say left",
+    "sentence": "i hardly dare open my mouth to plantagenet the duke of st bungay has cut me mr monk looks as ominous as an owl and your husband hasn't a word to say left",
     "filename": "2297_3440_000104_0.25"
   },
   {
@@ -526,7 +526,7 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_3956_000018_0.07.wav",
-    "sentence": "should you ever drop into the coffee-houses of the algerian upper town after dark even at this day you would still hear the natives chatting among themselves with many a wink and slight laugh of one sidi tart\\'ri",
+    "sentence": "should you ever drop into the coffee-houses of the algerian upper town after dark even at this day you would still hear the natives chatting among themselves with many a wink and slight laugh of one sidi tart'ri",
     "filename": "2297_3956_000018_0.07"
   },
   {
@@ -556,17 +556,17 @@ const stimuli = [
   },
   {
     "audio": "alpha_data/2297_4309_000971_0.20.wav",
-    "sentence": "are there twenty-two square miles covered with the wen\\'s market gardens the very question is absurd the whole of the market gardens from brompton to hammersmith extending to battersea rise on the one side and to the bayswater road on the other side",
+    "sentence": "are there twenty-two square miles covered with the wen's market gardens the very question is absurd the whole of the market gardens from brompton to hammersmith extending to battersea rise on the one side and to the bayswater road on the other side",
     "filename": "2297_4309_000971_0.20"
   },
   {
     "audio": "alpha_data/2297_4309_001170_0.15.wav",
-    "sentence": "this adds six pounds of bread to the bushel or nearly another quartern loaf and a half making nearly fifteen quartern loaves out of the bushel of wheat the finest flour is by no means the most wholesome and at any rate there is more nutritious matter in a pound of household bread than in a pound of baker\\'s bread",
+    "sentence": "this adds six pounds of bread to the bushel or nearly another quartern loaf and a half making nearly fifteen quartern loaves out of the bushel of wheat the finest flour is by no means the most wholesome and at any rate there is more nutritious matter in a pound of household bread than in a pound of baker's bread",
     "filename": "2297_4309_001170_0.15"
   },
   {
     "audio": "alpha_data/2297_4440_000018_0.10.wav",
-    "sentence": "the doctor do you think i\\'m going to begin taking physic at my time of life lord ma\\'am you amuse me-you do indeed she burst into a sudden fit of laughter the hysterical laughter which is on the verge of tears",
+    "sentence": "the doctor do you think i'm going to begin taking physic at my time of life lord ma'am you amuse me-you do indeed she burst into a sudden fit of laughter the hysterical laughter which is on the verge of tears",
     "filename": "2297_4440_000018_0.10"
   },
   {

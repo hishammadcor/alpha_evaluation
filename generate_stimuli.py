@@ -16,7 +16,7 @@ for filename in sorted(os.listdir(SOURCE_FOLDER)):
 
         if os.path.exists(lab_filepath):
             with open(lab_filepath, 'r', encoding='utf-8') as f:
-                sentence = f.read().strip().replace("'", "\\'")
+                sentence = f.read().strip()
             
             stimulus_data = {
                 "audio": os.path.join(SOURCE_FOLDER, filename).replace("\\", "/"),
