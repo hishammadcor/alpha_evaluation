@@ -40,6 +40,7 @@ const jsPsych = initJsPsych({
 // 2. Prepare the timeline
 const participant_id = getParticipantId(jsPsych);
 const saved_data = loadData();
+if (saved_data) { jsPsych.data.addData(saved_data); }
 const completed_trials = saved_data ? saved_data.map(trial => trial.audio_filename) : [];
 const stimuli_to_run = stimuli.filter(stimulus => !completed_trials.includes(stimulus.filename));
 
