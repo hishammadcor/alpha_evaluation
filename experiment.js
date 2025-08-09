@@ -46,6 +46,12 @@ const stimuli_to_run = stimuli.filter(stimulus => !completed_trials.includes(sti
 
 let timeline = [];
 
+const preload = {
+  type: jsPsychPreload,
+  audio: stimuli_to_run.map(s => s.audio)
+};
+timeline.unshift(preload);
+
 if (stimuli_to_run.length > 0) {
   let welcome_message = `
     <div class="content">
@@ -92,6 +98,7 @@ if (stimuli_to_run.length > 0) {
     }],
     timeline_variables: stimuli_to_run,
     randomize_order: true
+
   };
 
   timeline.push(main_trials);
