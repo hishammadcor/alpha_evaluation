@@ -80,42 +80,30 @@ if (stimuli_to_run.length > 0) {
   timeline.push(instructions);
 
   const main_trials = {
-    type: jsPsychAudioButtonResponse, // This will now work correctly
+    timeline: [{
+      type: jsPsychAudioButtonResponse,
+      stimulus: jsPsych.timelineVariable('audio'),
+      choices: ['Yes', 'No', 'Not Sure'],
+      prompt: () => {
+        const sentence = jsPsych.timelineVariable('sentence');
+        const filename = jsPsych.timelineVariable('filename');
+        return `<div class="prompt-container">
+                  <p>Does the following sentence match what you heard in the audio: <b>${filename}</b>?</p>
+                  <p class="prompt-sentence">"${sentence}"</p>
+                </div>`;
+      },
+      data: {
+        participant_id: participant_id,
+        task: 'audio-match',
+        sentence: jsPsych.timelineVariable('sentence'),
+        audio_filename: jsPsych.timelineVariable('filename')
+      }
+    }],
     timeline_variables: stimuli_to_run,
-    randomize_order: true,
-    stimulus: jsPsych.timelineVariable('audio'),
-    choices: ['Yes', 'No', 'Not Sure'],
-    prompt: () => {
-      const sentence = jsPsych.timelineVariable('sentence');
-      const filename = jsPsych.timelineVariable('filename');
-      return `
-        <div class="prompt-container">
-          <p>Does the following sentence match what you heard in the audio: <b>${filename}</b>?</p>
-          <p class="prompt-sentence">
-            "${sentence}"
-          </p>
-        </div>
-      `;
-    },
-    on_start: function() {
-      const container = document.querySelector('#jspsych-target');
-      if (container) {
-        container.insertAdjacentHTML('beforeend', '<p class="loading-message">Loading next audio...</p>');
-      }
-    },
-    on_load: function() {
-      const message = document.querySelector('#jspsych-target .loading-message');
-      if (message) {
-        message.remove();
-      }
-    },
-    data: {
-      participant_id: participant_id,
-      task: 'audio-match',
-      sentence: jsPsych.timelineVariable('sentence'),
-      audio_filename: jsPsych.timelineVariable('filename')
-    }
+    randomize_order: true
+
   };
+
   timeline.push(main_trials);
 }
 
