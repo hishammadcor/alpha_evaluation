@@ -52,12 +52,6 @@ const jsPsych = initJsPsych({
   display_element: 'jspsych-target'
 });
 
-const loadingMessage = document.createElement('div');
-loadingMessage.id = 'loading-message';
-loadingMessage.innerHTML = '<p style="font-size: 1.2em;">Loading next audio...</p>';
-loadingMessage.style.display = 'none';
-document.body.appendChild(loadingMessage);
-
 participant_id = getParticipantId(jsPsych);
 const saved_data = loadData(jsPsych);
 const completed_trials = saved_data
@@ -111,25 +105,10 @@ if (stimuli_to_run.length > 0 || !survey_completed) {
 
 if (stimuli_to_run.length > 0) {
   const main_trial = {
-    type: jsPsychAudioButtonResponse,
-    stimulus: jsPsych.timelineVariable('audio'),
+    type: jsPsychHtmlButtonResponse,
+    stimulus: jsPsych.timelineVariable('stimulus'),
     choices: ['Yes', 'No', 'Not Sure'],
-    prompt: () => {
-      const sentence = jsPsych.timelineVariable('sentence');
-      const filename = jsPsych.timelineVariable('filename');
-      return `<div class="prompt-container">
-                <p>Does the following sentence match what you heard in the audio: <b>${filename}</b>?</p>
-                <p class="prompt-sentence">"${sentence}"</p>
-              </div>`;
-    },
-    on_start: () => {
-      const msg = document.getElementById('loading-message');
-      if (msg) msg.style.display = 'block';
-    },
-    on_load: () => {
-      const msg = document.getElementById('loading-message');
-      if (msg) msg.style.display = 'none';
-    },
+    prompt: jsPsych.timelineVariable('prompt'),
     on_finish: () => {
       progressCount++;
       jsPsych.setProgressBar(progressCount / total_questions);
@@ -142,9 +121,16 @@ if (stimuli_to_run.length > 0) {
     }
   };
 
+  const trial_variables = stimuli_to_run.map(s => ({
+    stimulus: `<audio controls preload="none" src="${s.audio}"></audio>`,
+    prompt: `<div class="prompt-container"><p>Does the following sentence match what you heard in the audio: <b>${s.filename}</b>?</p><p class="prompt-sentence">"${s.sentence}"</p></div>`,
+    sentence: s.sentence,
+    filename: s.filename
+  }));
+
   const main_trials = {
     timeline: [main_trial],
-    timeline_variables: stimuli_to_run,
+    timeline_variables: trial_variables,
     randomize_order: true
   };
   timeline.push(main_trials);
