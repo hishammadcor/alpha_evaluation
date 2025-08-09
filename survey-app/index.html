@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Audio-Sentence Matching Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1>Audio-Sentence Matching Survey</h1>
+        <div class="participant" id="participantInfo"></div>
+      </header>
+
+      <main class="card" id="surveyCard" hidden>
+        <div class="progress-row">
+          <div id="progressText" class="progress-text"></div>
+          <div class="spacer"></div>
+          <button id="resetBtn" class="link-button" title="Start over on this device">Reset</button>
+        </div>
+
+        <div id="question" class="question"></div>
+
+        <div class="audio-block">
+          <audio id="audioPlayer" controls preload="none"></audio>
+        </div>
+
+        <div id="sentence" class="sentence"></div>
+
+        <div class="buttons">
+          <button class="answer yes" data-answer="Yes">Yes</button>
+          <button class="answer no" data-answer="No">No</button>
+          <button class="answer unsure" data-answer="Not Sure">Not Sure</button>
+        </div>
+      </main>
+
+      <section id="loading" class="center">
+        <div class="spinner" aria-hidden="true"></div>
+        <div>Loading survey…</div>
+      </section>
+
+      <section id="emptyState" class="center" hidden>
+        <h2>No data found</h2>
+        <p>
+          Put your <code>.wav</code> and matching <code>.lab</code> files into
+          <code>data/alpha_data</code> and run <code>npm run build:manifest</code> locally,
+          then deploy to GitHub Pages.
+        </p>
+      </section>
+
+      <section id="doneState" class="center" hidden>
+        <h2>All done!</h2>
+        <p>Your responses have been saved and a CSV download should start automatically.</p>
+        <button id="downloadBtn" class="primary">Download CSV again</button>
+        <button id="restartBtn" class="link-button">Restart survey</button>
+      </section>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
