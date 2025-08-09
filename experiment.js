@@ -12,20 +12,24 @@ function getParticipantId(jspsych_instance) {
   return pid;
 }
 
-function saveData(data) {
-  const dataString = JSON.stringify(data);
-  localStorage.setItem(STORAGE_KEY, dataString);
+function saveData(trial) {
+  const existing = localStorage.getItem(STORAGE_KEY);
+  const dataArray = existing ? JSON.parse(existing) : [];
+  dataArray.push(trial);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(dataArray));
 }
 
-function loadData() {
+function loadData(jspsych_instance) {
   const dataString = localStorage.getItem(STORAGE_KEY);
-  return dataString ? JSON.parse(dataString) : null;
+  const dataArray = dataString ? JSON.parse(dataString) : [];
+  dataArray.forEach(trial => jspsych_instance.data.addData(trial));
+  return dataArray;
 }
 
 // 1. Initialize jsPsych
 const jsPsych = initJsPsych({
   on_trial_finish: function() {
-    saveData(jsPsych.data.get().values());
+    saveData(jsPsych.data.getLastTrialData().values()[0]);
   },
   on_finish: function() {
     const participant_id = getParticipantId(jsPsych);
@@ -46,12 +50,17 @@ document.body.appendChild(loadingMessage);
 
 // 2. Prepare the timeline
 const participant_id = getParticipantId(jsPsych);
-const saved_data = loadData();
-if (saved_data) { jsPsych.data.addData(saved_data); }
-const completed_trials = saved_data ? saved_data.map(trial => trial.audio_filename) : [];
+const saved_data = loadData(jsPsych);
+const completed_trials = saved_data.map(trial => trial.audio_filename);
 const stimuli_to_run = stimuli.filter(stimulus => !completed_trials.includes(stimulus.filename));
 
 let timeline = [];
+
+const preload = {
+  type: jsPsychPreload,
+  audio: stimuli_to_run.map(s => s.audio)
+};
+timeline.unshift(preload);
 
 if (stimuli_to_run.length > 0) {
   let welcome_message = `
@@ -61,7 +70,7 @@ if (stimuli_to_run.length > 0) {
       <p>Your progress is saved automatically, so you can close the tab and return later to continue.</p>
     </div>
   `;
-  if (saved_data && completed_trials.length > 0) {
+  if (completed_trials.length > 0) {
     welcome_message = `
       <div class="content">
         <h2>Welcome Back!</h2>
@@ -78,7 +87,25 @@ if (stimuli_to_run.length > 0) {
   timeline.push(instructions);
 
   const main_trials = {
-    type: jsPsychAudioButtonResponse, // This will now work correctly
+    timeline: [{
+      type: jsPsychAudioButtonResponse,
+      stimulus: jsPsych.timelineVariable('audio'),
+      choices: ['Yes', 'No', 'Not Sure'],
+      prompt: () => {
+        const sentence = jsPsych.timelineVariable('sentence');
+        const filename = jsPsych.timelineVariable('filename');
+        return `<div class="prompt-container">
+                  <p>Does the following sentence match what you heard in the audio: <b>${filename}</b>?</p>
+                  <p class="prompt-sentence">"${sentence}"</p>
+                </div>`;
+      },
+      data: {
+        participant_id: participant_id,
+        task: 'audio-match',
+        sentence: jsPsych.timelineVariable('sentence'),
+        audio_filename: jsPsych.timelineVariable('filename')
+      }
+    }],
     timeline_variables: stimuli_to_run,
     randomize_order: true,
     stimulus: jsPsych.timelineVariable('audio'),
@@ -110,7 +137,9 @@ if (stimuli_to_run.length > 0) {
       sentence: jsPsych.timelineVariable('sentence'),
       audio_filename: jsPsych.timelineVariable('filename')
     }
+
   };
+
   timeline.push(main_trials);
 }
 
