@@ -57,3 +57,16 @@ body {
   padding: 15px;
   border-radius: 8px;
 }
+
+#jspsych-target {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+#jspsych-progressbar-outer {
+  width: 100%;
+}
+
+#jspsych-progressbar-inner {
+  background-color: #0069d9;
+}
