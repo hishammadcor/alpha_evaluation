@@ -4,12 +4,20 @@
     <title>Audio Evaluation Survey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="jspsych/jspsych.css">
+    <link rel="stylesheet" href="jspsych/survey.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="player-container"></div>
+    <div id="jspsych-target"></div>
 
     <script src="stimuli.js"></script>
-    <script src="player.js"></script>
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-preload.js"></script>
+    <script src="jspsych/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugin-audio-button-response.js"></script>
+    <script src="jspsych/plugin-survey-multi-choice.js"></script>
+    <script src="jspsych/plugin-survey-text.js"></script>
+    <script src="experiment.js"></script>
   </body>
 </html>
