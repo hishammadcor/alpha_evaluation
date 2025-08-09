@@ -38,8 +38,15 @@ const jsPsych = initJsPsych({
     localStorage.removeItem(STORAGE_KEY + '_pid');
   },
   // We need to tell jsPsych where our target div is
-  display_element: 'jspsych-target' 
+  display_element: 'jspsych-target'
 });
+
+// Custom loading message element
+const loadingMessage = document.createElement('div');
+loadingMessage.id = 'loading-message';
+loadingMessage.innerHTML = '<p style="font-size: 1.2em;">Loading next audio...</p>';
+loadingMessage.style.display = 'none';
+document.body.appendChild(loadingMessage);
 
 // 2. Prepare the timeline
 const participant_id = getParticipantId(jsPsych);
@@ -100,7 +107,36 @@ if (stimuli_to_run.length > 0) {
       }
     }],
     timeline_variables: stimuli_to_run,
-    randomize_order: true
+    randomize_order: true,
+    stimulus: jsPsych.timelineVariable('audio'),
+    choices: ['Yes', 'No', 'Not Sure'],
+    prompt: () => {
+      const sentence = jsPsych.timelineVariable('sentence');
+      const filename = jsPsych.timelineVariable('filename');
+      return `
+        <div class="prompt-container">
+          <p>Does the following sentence match what you heard in the audio: <b>${filename}</b>?</p>
+          <p class="prompt-sentence">
+            "${sentence}"
+          </p>
+        </div>
+      `;
+    },
+    on_start: () => {
+      const msg = document.getElementById('loading-message');
+      if (msg) msg.style.display = 'block';
+    },
+    on_load: () => {
+      const msg = document.getElementById('loading-message');
+      if (msg) msg.style.display = 'none';
+    },
+
+    data: {
+      participant_id: participant_id,
+      task: 'audio-match',
+      sentence: jsPsych.timelineVariable('sentence'),
+      audio_filename: jsPsych.timelineVariable('filename')
+    }
 
   };
 
