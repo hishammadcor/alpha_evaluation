@@ -12,20 +12,24 @@ function getParticipantId(jspsych_instance) {
   return pid;
 }
 
-function saveData(data) {
-  const dataString = JSON.stringify(data);
-  localStorage.setItem(STORAGE_KEY, dataString);
+function saveData(trial) {
+  const existing = localStorage.getItem(STORAGE_KEY);
+  const dataArray = existing ? JSON.parse(existing) : [];
+  dataArray.push(trial);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(dataArray));
 }
 
-function loadData() {
+function loadData(jspsych_instance) {
   const dataString = localStorage.getItem(STORAGE_KEY);
-  return dataString ? JSON.parse(dataString) : null;
+  const dataArray = dataString ? JSON.parse(dataString) : [];
+  dataArray.forEach(trial => jspsych_instance.data.addData(trial));
+  return dataArray;
 }
 
 // 1. Initialize jsPsych
 const jsPsych = initJsPsych({
   on_trial_finish: function() {
-    saveData(jsPsych.data.get().values());
+    saveData(jsPsych.data.getLastTrialData().values()[0]);
   },
   on_finish: function() {
     const participant_id = getParticipantId(jsPsych);
@@ -39,9 +43,8 @@ const jsPsych = initJsPsych({
 
 // 2. Prepare the timeline
 const participant_id = getParticipantId(jsPsych);
-const saved_data = loadData();
-if (saved_data) { jsPsych.data.addData(saved_data); }
-const completed_trials = saved_data ? saved_data.map(trial => trial.audio_filename) : [];
+const saved_data = loadData(jsPsych);
+const completed_trials = saved_data.map(trial => trial.audio_filename);
 const stimuli_to_run = stimuli.filter(stimulus => !completed_trials.includes(stimulus.filename));
 
 let timeline = [];
@@ -54,7 +57,7 @@ if (stimuli_to_run.length > 0) {
       <p>Your progress is saved automatically, so you can close the tab and return later to continue.</p>
     </div>
   `;
-  if (saved_data && completed_trials.length > 0) {
+  if (completed_trials.length > 0) {
     welcome_message = `
       <div class="content">
         <h2>Welcome Back!</h2>
