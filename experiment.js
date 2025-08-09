@@ -94,7 +94,18 @@ if (stimuli_to_run.length > 0) {
         </div>
       `;
     },
-    trial_starts_message: '<p class="loading-message">Loading next audio...</p>',
+    on_start: function() {
+      const container = document.querySelector('#jspsych-target');
+      if (container) {
+        container.insertAdjacentHTML('beforeend', '<p class="loading-message">Loading next audio...</p>');
+      }
+    },
+    on_load: function() {
+      const message = document.querySelector('#jspsych-target .loading-message');
+      if (message) {
+        message.remove();
+      }
+    },
     data: {
       participant_id: participant_id,
       task: 'audio-match',
